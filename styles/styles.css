@@ -1,5 +1,7 @@
-header {
+html {
     background-color: #101035;
+}
+header {
     color: #ffffff;
     text-align: center;
     padding: 0.5em;
@@ -45,5 +47,8 @@ section#section-flexbox {
     gap: 1rem;
 }
 div.flex {
-    width: calc(100% / 3);
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 2px 2px #f1f1f1;
+    padding: 0.5em;
 }
