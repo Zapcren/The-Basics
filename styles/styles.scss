@@ -1,0 +1,138 @@
+$black: #2b2b2b;
+$grey: #808080;
+$white: #f1f1f1;
+$light-grey: #a5a5a5;
+$switch-gradient-black: linear-gradient(135deg, $grey, $black);
+$switch-gradient-white: linear-gradient(135deg, $white, $light-grey);
+%flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+%day-night-transition {
+    transition-duration: 2s;
+}
+%dark-mode {
+    background-color: $black;
+    color: $white;
+    transition-duration: 2s;
+}
+%light-mode {
+    background-color: $white;
+    color: $black;
+    transition-duration: 2s;
+}
+// * {
+//     @extend %day-night-transition;
+// }
+
+html.dark-mode {
+    @extend %dark-mode;
+
+    header, #section-1 {
+        @extend %light-mode;
+    }
+    #day-night-switch {
+        background-color: $black;
+        background: $switch-gradient-black;
+        outline: 1px solid $black;
+    }
+    #day-night-switch span {
+        background-color: $white;
+        background: $switch-gradient-white;
+        outline: 1px solid $white;
+        transform: translateX(100%);
+    }
+    div.flex {
+        box-shadow: 2px 2px $black;
+    }
+}
+html.light-mode {
+    @extend %light-mode;
+
+    header, #section-1 {
+        @extend %dark-mode;
+    }
+    #day-night-switch {
+        background-color: $white;
+        background: $switch-gradient-white;
+        outline: 1px solid $white;
+    }
+    #day-night-switch span {
+        background-color: $black;
+        background: $switch-gradient-black;
+        outline: 1px solid $black;
+    }
+    div.flex {
+        box-shadow: 2px 2px $white;
+    }
+}
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    // @extend %day-night-transition;
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+header {
+    @extend %flex-row-between;
+    // @extend %day-night-transition;
+    text-align: center;
+    padding: 0.5rem;
+}
+#day-night-switch {
+    // @extend %day-night-transition;
+    // display: flex;
+    // align-items: center;
+    border-radius: 31px;
+    width: 56px;
+    height: 31px;
+    cursor: pointer;
+}
+#day-night-switch span {
+    // @extend %day-night-transition;
+    display: block;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+}
+
+#section-1 {
+    // @extend %day-night-transition;
+    border-radius: 10px;
+    padding: 1rem;
+}
+#section-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+div.flex {
+    
+    width: 100%;
+    max-width: 350px;
+    padding: 0.5em;
+}
