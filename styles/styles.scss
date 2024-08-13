@@ -84,13 +84,17 @@ html.light-mode {
     width: 56px;
     height: 31px;
     cursor: pointer;
-}
-#day-night-switch span {
-    display: block;
-    border-radius: 25px;
-    width: 25px;
-    height: 25px;
-    margin: 3px;
+
+    span {
+        display: block;
+        border-radius: 25px;
+        width: 25px;
+        height: 25px;
+        margin: 3px;
+    }
+} 
+#day-night-switch:hover span {
+    opacity: 0.7;
 }
 
 // Base styles
@@ -143,6 +147,8 @@ header {
 nav ul {
     @extend %flex-row-between;
     text-align: center;
+    max-width: 800px;
+    margin: auto;
     
     li {
         list-style: none;
@@ -158,6 +164,9 @@ nav ul {
             font-family: sans-serif;
             padding: 5px
         }
+        a:hover {
+            background-color: $grey;
+        }
     }
 }
 
@@ -170,10 +179,14 @@ div.personal {
     p.social {
         font-size: 24px;
         width: 30px;
-    }
-    .social a {
-        color: $white;
-        text-decoration: none;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
     }
 }
 

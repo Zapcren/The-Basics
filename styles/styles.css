@@ -65,13 +65,16 @@ html.light-mode div.flex {
   height: 31px;
   cursor: pointer;
 }
-
 #day-night-switch span {
   display: block;
   border-radius: 25px;
   width: 25px;
   height: 25px;
   margin: 3px;
+}
+
+#day-night-switch:hover span {
+  opacity: 0.7;
 }
 
 html {
@@ -123,6 +126,8 @@ header {
 
 nav ul {
   text-align: center;
+  max-width: 800px;
+  margin: auto;
 }
 nav ul li {
   list-style: none;
@@ -138,6 +143,9 @@ nav ul li a {
   font-family: sans-serif;
   padding: 5px;
 }
+nav ul li a:hover {
+  background-color: #6a6a6a;
+}
 
 div.personal {
   text-align: center;
@@ -147,9 +155,12 @@ div.personal p.social {
   font-size: 24px;
   width: 30px;
 }
-div.personal .social a {
+div.personal p.social a {
   color: #f1f1f1;
   text-decoration: none;
+}
+div.personal p.social a:hover {
+  opacity: 0.7;
 }
 
 #intro {
