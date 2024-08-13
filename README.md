@@ -1,6 +1,9 @@
 # The Basics
  Basic coding and web development setup
 
+ View site:
+ https://zapcren.github.io/The-Basics/
+
  Hello everyone,
 
  My name is Ryan Quigley.
