@@ -11,4 +11,4 @@
 
  I am a talented web developer and an ambitious writer.
 
- This project will show some of the basics for HTML, CSS, and Javascript development
+ This project will show some of the basics for HTML, SaSS, and Javascript development
